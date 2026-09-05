@@ -98,7 +98,7 @@ def build_signal(hist, params) -> pd.Series:
     vol = hist.returns.tail(int(params["vol_days"])).std() * np.sqrt(252)
     score = (1.0 / vol.replace(0.0, np.nan)).reindex(hist.assets).fillna(0.0)
 
-    # Sajjaad
+    # Sajjaad 123
 
     # standardise so the signal scale is stable through time
     if score.std() > 0:
